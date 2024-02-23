@@ -8,6 +8,8 @@
     <!-- BS 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom JS -->
@@ -18,6 +20,11 @@
 
 <body>
     <div class="container">
+        <div id="alert" class="alert-dismissible d-flex justify-content-between" >
+            <p id="alertMsg" hidden><strong id="alertTitle">Success!</strong></p>
+            <a id="alertClose" href="#" class="close" data-dismiss="alert" aria-label="close" hidden>&times;</a>
+          </div> 
+
         <ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="feed-tab" data-bs-toggle="tab" data-bs-target="#feed-tab-pane"
@@ -41,8 +48,11 @@
                 <button class="nav-link" id="sign-up-tab" data-bs-toggle="tab" data-bs-target="#sign-up-tab-pane"
                     type="button" role="tab" aria-controls="sign-up-tab-pane" aria-selected="false">Sign Up</button>
             </li>
+            <li class="nav-item" role="presentation">
+                <button class="logout-btn" id="logout-tab" type="button" role="tab" aria-controls="logout-tab-pane" aria-selected="false" hidden onclick="logout()">Logout</button>
+            </li>
         </ul>
-
+  
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade" id="feed-tab-pane" role="tabpanel" aria-labelledby="feed-tab" tabindex="0">FEED
                 HERE</div>
